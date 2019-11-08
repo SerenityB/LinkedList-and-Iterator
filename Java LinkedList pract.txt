@@ -1,0 +1,18 @@
+import java.util.LinkedList; 
+import java.util.ListIterator; 
+public class Main
+{
+	public static void main(String[] args) {
+		LinkedList<String> names = new LinkedList<>();
+		names.addLast("SpongeBob");
+		names.addFirst("Patrick");
+		names.add("Sandy");
+		
+		ListIterator<String> iterator = names.listIterator();
+		iterator.next(); // P|SS this is where my iterator is positioned
+		iterator.next(); // PS|S
+		iterator.add("Mr.Krabs"); // Mr.Krabs will be inserted at this position
+		
+		System.out.println(names);
+	}
+}
